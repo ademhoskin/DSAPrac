@@ -1,11 +1,5 @@
-def print_items(n):
-    # o(n^2)
-    for i in range(n):
-        print(i)
-        for j in range(n):
-            print(j)
-    # + o(n) -- simplify to o(n^2) due to non dominance dropping
-    for k in range(n):
-        print(k)
+def add_items(n):
+    #constant time o(1)--- does not scale with n
+    return n+n
 
-print_items(10)
+print(add_items(100000000000000000000))
