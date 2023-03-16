@@ -16,10 +16,10 @@ class LinkedList(Node):
         temp = self.head
         while temp is not None:
             print(temp.value)
-            temp = next.value
+            temp = temp.next
     def append(self, value):
         new_node = Node(value)
-        if self.head is None:
+        if self.length == 0:
             self.head = new_node
             self.tail = new_node
         else:
@@ -27,8 +27,36 @@ class LinkedList(Node):
             self.tail = new_node
         self.length += 1
         return True
-    def prepend:
+    def pop(self):
+
+        if self.length == 0:
+            return None
+            self.head = None
+            self.length -= 1
+        pre = self.head
+        temp = self.head
+        while(temp.next):
+            pre = temp
+            temp = temp.next
+        self.tail = pre
+        self.tail.next = None
+        self.length -= 1
+        if self.length == 0:
+            self.head = None
+            self.tail = None
+        return temp
+    def prepend(self, value):
+        new_node = Node(VALUE)
+        if self.length == 0
+
+
+
+
+
+
 
 LL1= LinkedList(7)
-print(LL1.head.value)
-
+LL1.append(11)
+print(LL1.print_list())
+LL1.pop()
+print(LL1.print_list())
